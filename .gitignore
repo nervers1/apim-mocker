@@ -1,0 +1,7 @@
+# package directories
+node_modules
+jspm_packages
+
+# Test and coverage reports
+coverage/
+.nyc_output/

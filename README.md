@@ -1,56 +1,102 @@
-# OpenAPI Mocker
+# APIM-Mocker
+금융보안원 api Handler 입니다.
+- Handling route GET /oauth/2.0/token
+- Handling route POST /oauth/2.0/token
+- Handling route GET /oauth/2.0/revoke
+- Handling route GET /oauth/2.0/authorize
+- Handling route POST /telecom/telecoms/transactions
+- Handling route POST /telecom/telecoms/paid-transactions
+- Handling route POST /support/oauth/2.0/token
+- Handling route POST /mgmts/statistics
+- Handling route POST /invest/irps/transactions
+- Handling route POST /invest/irps/detail
+- Handling route POST /invest/irps/basic
+- Handling route POST /invest/accounts/transactions
+- Handling route POST /invest/accounts/products
+- Handling route POST /invest/accounts/basic
+- Handling route POST /integ/oauth/2.0/token
+- Handling route POST /insu/loans/transactions
+- Handling route POST /insu/loans/detail
+- Handling route POST /insu/loans/basic
+- Handling route POST /insu/irps/transactions
+- Handling route POST /insu/irps/detail
+- Handling route POST /insu/irps/basic
+- Handling route POST /insu/insurances/transactions
+- Handling route POST /insu/insurances/payment
+- Handling route POST /insu/insurances/contracts
+- Handling route POST /insu/insurances/car
+- Handling route POST /insu/insurances/car/transactions
+- Handling route POST /insu/insurances/basic
+- Handling route POST /ginsu/insurances/transactions
+- Handling route POST /ginsu/insurances/basic
+- Handling route POST /finan/oauth/2.0/token
+- Handling route POST /efin/accounts/transactions
+- Handling route POST /efin/accounts/prepaid-transactions
+- Handling route POST /efin/accounts/charge
+- Handling route POST /efin/accounts/balance
+- Handling route POST /company/oauth/2.0/token
+- Handling route POST /capital/loans/transactions
+- Handling route POST /capital/loans/oplease/transactions
+- Handling route POST /capital/loans/oplease/basic
+- Handling route POST /capital/loans/detail
+- Handling route POST /capital/loans/basic
+- Handling route POST /ca_verification
+- Handling route POST /bank/irps/transactions
+- Handling route POST /bank/irps/detail
+- Handling route POST /bank/irps/basic
+- Handling route POST /bank/accounts/loan/transactions
+- Handling route POST /bank/accounts/loan/detail
+- Handling route POST /bank/accounts/loan/basic
+- Handling route POST /bank/accounts/invest/transactions
+- Handling route POST /bank/accounts/invest/detail
+- Handling route POST /bank/accounts/invest/basic
+- Handling route POST /bank/accounts/deposit/transactions
+- Handling route POST /bank/accounts/deposit/detail
+- Handling route POST /bank/accounts/deposit/basic
+- Handling route GET /telecom/telecoms
+- Handling route GET /telecom/telecoms/bills
+- Handling route GET /telecom/consents
+- Handling route GET /telecom/apis
+- Handling route GET /mgmts/status
+- Handling route GET /mgmts/sevices
+- Handling route GET /mgmts/req-statistics
+- Handling route GET /mgmts/orgs
+- Handling route GET /mgmts/consents
+- Handling route GET /mgmts/ca_credentials
+- Handling route GET /invest/irps
+- Handling route GET /invest/consents
+- Handling route GET /invest/apis
+- Handling route GET /invest/accounts
+- Handling route GET /insu/loans
+- Handling route GET /insu/irps
+- Handling route GET /insu/insurances
+- Handling route GET /insu/consents
+- Handling route GET /insu/apis
+- Handling route GET /ginsu/insurances
+- Handling route GET /ginsu/consents
+- Handling route GET /ginsu/apis
+- Handling route GET /efin/consents
+- Handling route GET /efin/apis
+- Handling route GET /efin/accounts
+- Handling route GET /card/loans
+- Handling route GET /card/loans/short-term
+- Handling route GET /card/loans/revolving
+- Handling route GET /card/loans/long-term
+- Handling route GET /card/consents
+- Handling route GET /card/cards
+- Handling route GET /card/cards/:card_id
+- Handling route GET /card/cards/:card_id/approval-overseas
+- Handling route GET /card/cards/:card_id/approval-domestic
+- Handling route GET /card/cards/point
+- Handling route GET /card/cards/payment
+- Handling route GET /card/cards/bills
+- Handling route GET /card/cards/bills/detail
+- Handling route GET /card/apis
+- Handling route GET /capital/loans
+- Handling route GET /capital/consents
+- Handling route GET /capital/apis
+- Handling route GET /bank/irps
+- Handling route GET /bank/consents
+- Handling route GET /bank/apis
+- Handling route GET /bank/accounts
 
-[![Build Status](https://travis-ci.org/jormaechea/open-api-mocker.svg?branch=master)](https://travis-ci.org/jormaechea/open-api-mocker)
-[![Coverage Status](https://coveralls.io/repos/github/jormaechea/open-api-mocker/badge.svg?branch=master)](https://coveralls.io/github/jormaechea/open-api-mocker?branch=master)
-
-An API mocker based in the OpenAPI 3.0 specification.
-
-## Installation and usage
-
-### Using npm
-
-```
-npm i -g open-api-mocker
-
-open-api-mocker -s my-schema.json -w
-
-open-api-mocker --help # To prompt every available setting.
-```
-
-### Using docker
-
-```
-docker run -v "$PWD/myschema.json:/app/schema.json" -p "5000:5000" jormaechea/open-api-mocker
-```
-
-Or to run an specific version
-
-```
-docker run -v "$PWD/myschema.json:/app/schema.json" -p "5000:5000" jormaechea/open-api-mocker:X.Y.Z`
-```
-
-You can set any parameter when running inside a docker container
-
-```
-docker run -v "$PWD/myschema.json:/app/schema.json" -p "3000:3000" jormaechea/open-api-mocker:X.Y.Z -s /app/schema.json -p 3000`
-```
-
-## Capabilities
-
-- [x] Read yaml and json OpenAPI v3 schemas.
-- [x] Port binding selection
-- [x] Request parameters validation
-- [x] Request body validation
-- [x] Response body and headers generation based on examples or schemas
-- [x] Response selection using request header: `Prefer: statusCode=XXX` or `Prefer: example=name` 
-- [x] Request and response logging
-- [x] Servers basepath support
-- [ ] API Authentication
-
-## Tests
-
-Simply run `npm t`
-
-## Contributing
-
-Issues and PRs are welcome.

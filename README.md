@@ -1,5 +1,8 @@
 # APIM-Mocker
 금융보안원 api Handler 입니다.
+
+## 실행명령 : node lib\open-api-mocker-cli.js -s tests\resources\apim.yml
+
 - Handling route GET /oauth/2.0/token
 - Handling route POST /oauth/2.0/token
 - Handling route GET /oauth/2.0/revoke
